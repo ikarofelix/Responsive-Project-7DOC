@@ -1,3 +1,12 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 :root{
     --body-background:rgb(236, 231, 231);
     --background:#FFFFFF;
@@ -25,14 +34,17 @@ html{
     margin:0;
     padding:0;
     scroll-behavior: smooth;
+    overflow-x:hidden;
+    
 }
 
 body{
     background: var(--body-background);
     width:360px;
-    height:100vh;
     margin:auto;
     font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    list-style-type: none;
 }
 
 header{
@@ -48,15 +60,6 @@ header{
 
 .profile-border{
     border-radius:100%;
-}
-
-#first-image{
-    background-image:url(/7daysofcode-responsividade-1-7/image2.png);
-    background-position:30% 20%;
-    background-size:300%;
-    margin-left:20px;
-    height:57px;
-    width:57px;
 }
 
 .user-text{
@@ -77,6 +80,7 @@ header{
 main{
     margin-top:30px;
     margin-left:20px;
+    padding-bottom:70px;
     width:var(--main-width);
 }
   
@@ -102,16 +106,6 @@ main{
     border-radius:8px;
     backdrop-filter: blur(11px);
     margin-bottom:15px;
-}
-
-#second-image{
-    grid-area: profile;
-    background-image: url(/7daysofcode-responsividade-1-7/image3.jpg);
-    background-position:30% 20%;
-    background-size:100%;
-    height:var(--profile-border);
-    width:var(--profile-border);
-    margin: auto auto;
 }
 
 .info{
@@ -205,6 +199,232 @@ main{
     grid-column: 1/4;
 }
 
+
+
+
+
+
+/* MORE OPTIONS */
+/* ---------------------------------------------------------------------------------------- */
+#add-options, .add-options-icon{
+    position: absolute;
+    display: flex;
+    top:20px;
+    
+    height:18px;
+
+    background-repeat: no-repeat;
+}
+
+.more{
+    bottom:80px;
+}
+
+.more-icon{
+    top:18px;
+    left:18px;
+    width:20px;
+    height:20px;
+
+    background-image: url(./icons/mais-icone.svg);
+    background-position: 50% 50%;
+
+    
+    transition-duration: .5s;
+}
+.options-active .eclipse .more-icon{
+    transform: rotate(45deg);
+}
+
+.eclipse.more,
+.options-active ~ .eclipse.video,
+.options-active ~ .eclipse.location{
+    position: fixed;
+    width:56px;
+    height:56px;
+    right:20px;
+
+    background: var(--location-button-color);
+    box-shadow: 0px 4px 4px rgba(255, 152, 56, 0.06);
+    border-radius: 100%;
+
+    cursor:pointer;
+    z-index:100;
+}
+
+.eclipse.location p,
+.eclipse.video p{
+    opacity: 0;
+}
+
+.options-active ~ .eclipse.location p,
+.options-active ~ .eclipse.video p{
+    opacity: 1;
+    position: absolute;
+    width:max-content;
+    font-size:min(max(20px), 3.8vw);
+    top:8px;
+    right:5em;
+    padding:5px;
+    padding-right:10px;
+    padding-left:10px;
+    border-radius: 100px;
+
+    color:var(--text-color);
+    background: var(--background);
+}
+
+.options-active ~ .video{
+    bottom:150px;
+    opacity:1;
+    animation: options-move-video .5s ;
+}
+
+.options-active ~ .video .video-icon{
+    background-image: url(./icons/Camerafab.svg);
+    left:17px;
+    width:25px;    
+}
+
+.options-active ~ .location{
+    bottom:220px;
+    opacity:1;
+    animation: options-move-location 1s ;
+}
+
+.options-active ~ .location .location-icon{
+    background-image: url(./icons/pinfabiconee.svg);
+    left:18px;
+    top:16px;
+    width:25px;
+    height:26px;
+}
+
+.options-active .background-blur{
+    position: fixed;
+    bottom:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background: grey;
+    opacity:0.4;
+    z-index:99;
+
+    animation: background-blur .5s ;
+}
+
+
+@keyframes options-move-video {
+    from {bottom:80px;
+          z-index:98;
+          opacity:0;}
+
+    to {bottom:150px;
+        opacity:1;}
+}
+@keyframes options-move-location{
+    from {bottom:80px;
+          z-index:97;
+          opacity:0;}
+
+    to {bottom:220px;
+        opacity:1;}
+}
+@keyframes background-blur{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER MENU OPTIONS */
+/* ---------------------------------------------------------------------------------------- */
+footer.bottom-menu{
+    position: fixed;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:end;
+    padding-bottom:6px;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:58px;
+    background:var(--background);    
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px 12px 0px 0px;
+}
+footer{
+    color:var(--text-color);
+}
+.menu-icon>span{
+    display: block;
+    margin:auto;
+}
+.consults>span{
+    background-image: url(./icons/calendario-icone.svg);
+    width:20px;
+    height:22px;
+}
+.clients>span{
+    background-image: url(./icons/clientes-icone.svg);
+    width:24px;
+    height:20px;
+}
+.dashboard>span{
+    background-image: url(./icons/relatorios-icone.svg);
+    width:14px;
+    height:18px;
+}
+.menu>span{
+    background-image: url(./icons/menu-icone.svg);
+    width:20px;
+    height:14px;
+}
+.consults:hover,
+.clients:hover,
+.dashboard:hover,
+.menu:hover{
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+/* IMAGES PROPERTIES */
+/* ---------------------------------------------------------------------------------------- */
+#first-image{
+    background-image:url(/7daysofcode-responsividade-1-7/image2.png);
+    background-position:30% 20%;
+    background-size:300%;
+    margin-left:20px;
+    height:57px;
+    width:57px;
+}
+
+#second-image{
+    grid-area: profile;
+    background-image: url(/7daysofcode-responsividade-1-7/image3.jpg);
+    background-position:30% 20%;
+    background-size:100%;
+    height:var(--profile-border);
+    width:var(--profile-border);
+    margin: auto auto;
+}
+
 #third-image{
     grid-area: profile;
     background-image: url(/7daysofcode-responsividade-1-7/image5.png);
@@ -226,6 +446,10 @@ main{
 }
 
 
+
+
+/* MEDIA CONFIGURATIONS */
+/* ---------------------------------------------------------------------------------------- */
 @media screen and (min-width:800px){
     :root{
         --profile-border:60px;
@@ -285,16 +509,6 @@ main{
 
 @media screen and (min-width:1500px){
     :root{
-        /* --profile-border:50px;
-        --user-title-size:35px;
-        --user-subtitle-size:20px;
-        --main-width:calc(100vw - 100px);
-        --grid-container-width:25rem;
-        --grid-container-height:15rem;
-        --name-size:20px;
-        --consult-size:15px;
-        --consultation-time-size:17px;
-        --location-size:19px; */
         --profile-border:60px;
         --user-title-size:30px;
         --user-subtitle-size:18px;
@@ -337,29 +551,6 @@ main{
         grid-template-rows: 6rem 10px auto;
         margin-bottom:25px;
     }
-    /* .message{
-        font-size: 35px;
-        height:40px;
-        width:40px;
-    }
-    .separator{
-        height:3px;
-    }
-    .time{
-        top:20px;
-        font-size: var(--consultation-time-size);
-    }
-    .call-button{
-        width:185px;
-        height:60px;
-    }
-    .voice-call{
-        border: 3px solid var(--audio-call-button-border-color);
-    }
-    .address{
-        width:370px;
-        height:60px;
-    } */
     .message{
         font-size: 35px;
         height:40px;
