@@ -1,0 +1,111 @@
+@import url(./more.css);
+@import url(./footer.css);
+@import url(./consults.css);
+
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --body-background:rgb(236, 231, 231);
+    --background:#FFFFFF;
+    --title-color:#464646;
+    --subtitle-color:#A3A3A3;
+    --text-color:#464646;
+    --location-button-color:#4894FF;
+    --message-icon-background-color:#F6F6F6;
+    --message-icon-color:#4894FF;
+    --video-call-button-background:#FFB050;
+    --audio-call-button-border-color:#ECECEC;
+}
+
+html{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+    min-width:300px;
+    max-width:1750px;
+}
+
+body{
+    background: var(--body-background);
+    /* width:360px; */
+    width:21rem;
+    /* max-width: 600px; */
+    margin:auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    list-style-type: none;
+}
+
+
+
+/* MEDIA SETTINGS */
+
+@media screen and (min-width:300px){
+    header{
+        font-size:1em;
+        height:8rem;
+    }
+    .schedule{
+        font-size: 1.8vh;
+    }
+    .body{
+        width:50vw;
+    }
+    @media screen and (min-width:500px){
+        header{
+            font-size:calc(1em + .1vw);
+            height:8rem;
+        }
+        .schedule{
+            font-size: 1.8vh;
+        }
+        body{
+            width:70vw;
+        }
+    }
+}
+
+@media screen and (min-width:1200px){
+    header{
+        font-size:1vw;
+        height:8vw;
+    }
+    .schedule{
+        font-size: 1vw;
+    }
+    body{
+        animation:shrinking .5s;
+        width:50vw;
+    }
+    @keyframes shrinking {
+        from {width:70vw;}
+        to {width:50vw;}
+    } 
+}
+
+@media screen and (min-width:1750px){
+    header{
+        font-size:18px;
+        height:140px;
+    }
+    .schedule{
+        font-size: 18px;
+    }
+    body{
+        animation:shrinkingLast .5s;
+        width:700px;
+    }
+    @keyframes shrinkingLast {
+        from {width:50vw;}
+        to {width:700px;}
+    }
+}

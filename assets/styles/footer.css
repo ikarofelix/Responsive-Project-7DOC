@@ -1,0 +1,49 @@
+/* FOOTER MENU OPTIONS */
+/* ---------------------------------------------------------------------------------------- */
+footer.bottom-menu{
+    position: fixed;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:end;
+    padding-bottom:6px;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:58px;
+    background:var(--background);    
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px 12px 0px 0px;
+}
+footer{
+    color:var(--text-color);
+}
+.menu-icon>span{
+    display: block;
+    margin:auto;
+}
+.consults>span{
+    background-image: url(../icons/calendario-icone.svg);
+    width:20px;
+    height:22px;
+}
+.clients>span{
+    background-image: url(../icons/clientes-icone.svg);
+    width:24px;
+    height:20px;
+}
+.dashboard>span{
+    background-image: url(../icons/relatorios-icone.svg);
+    width:14px;
+    height:18px;
+}
+.menu>span{
+    background-image: url(../icons/menu-icone.svg);
+    width:20px;
+    height:14px;
+}
+.consults:hover,
+.clients:hover,
+.dashboard:hover,
+.menu:hover{
+    cursor:pointer;
+}

@@ -1,0 +1,195 @@
+header{
+    font-size:15px;
+    height:8rem;
+}
+
+.user-info{
+    position:relative;
+    display:flex;
+    justify-content: center;
+
+    height:60%;
+    top:50px;
+}
+
+.profile-border{
+    width:4em;
+    height:4em;
+    border-radius:100%;
+    overflow: hidden;
+}
+
+.user-picture{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.user-text{
+    display:block;
+    margin-left:30px;
+}
+
+.title{
+    color:var(--title-color);
+    /* font-size: 22px; */
+    font-size:1.3em;
+}
+
+.subtitle{
+    color:var(--title-color);
+    font-size: .9em;
+}
+
+main{
+    margin-top:30px;
+    margin-left:20px;
+    padding-bottom:70px;
+}
+
+.schedule{
+    font-size:15px;
+}
+  
+.date-section{
+    padding-bottom:30px;
+} 
+
+.date{
+    margin-bottom:15px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 5em auto 5em;
+    grid-template-rows: 5em 1px auto;
+    grid-template-areas: 
+    'profile name message'
+    'middle-left middle middle-right'
+    'bottom-left bottom bottom-right';
+    background: var(--background);
+    height:12em;
+    border-radius:8px;
+    backdrop-filter: blur(11px);
+    margin-bottom:15px;
+}
+
+.client-border{
+    grid-area:profile;
+    margin: auto auto;
+
+    width:2.5em;
+    height:2.5em;
+    border-radius:100%;
+    overflow: hidden;
+}
+.client-picture{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.client-info{
+    grid-area: name;
+    margin:auto 0;
+}
+.client-name{
+    font-size: .9em;
+}
+.consult-type{
+    display:flex;
+    opacity: 0.9;
+}
+.consult-type .bx{
+    margin-top:2px;
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+.consult{
+    font-size: .8em;
+}
+
+.message{
+    grid-area: message;
+    font-size: 1.7em;
+    background: var(--message-icon-background-color);
+    color:var(--message-icon-color);
+    margin:auto;
+    height:1.3em;
+    width:1.3em;
+    border-radius: 100%;
+}
+.message .bx{
+    position: relative;
+    margin:auto;
+    left:4px;
+}
+
+.separator{
+    grid-area: middle;
+    grid-column: 1/4;
+    height:1px;
+    background:var(--text-color);
+    opacity:0.1;
+}
+
+.time{
+    position: relative;
+    grid-column: 1/4;
+    top:.5em;
+    left: 1.4em;
+    color:var(--text-color);
+}
+
+.consultation-time{
+    font-size:1em;
+}
+
+.call-buttons{
+    grid-column: 1/4;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    width:95%;
+    height:80%;
+}
+
+.call-button{
+    position: relative;
+    bottom:.3em;
+    width:48%;
+    height:100%;
+    font-size:.8em;
+    border-radius: 8px;
+}
+
+.video-call{
+    box-sizing: border-box;
+    background:var(--video-call-button-background);
+    border:0;
+    color:var(--background);
+    box-shadow: 0px 4px 16px rgba(255, 176, 80, 0.16);
+}
+
+.voice-call{
+    box-sizing: border-box;
+    background: var(--background);
+    border: 1px solid var(--audio-call-button-border-color);
+    color:var(--text-color);
+}
+
+.address{
+    position: relative;
+    margin:auto;
+    box-sizing: border-box;
+    grid-column: 1/4;
+    bottom:.3em;
+    border:0;
+    width:95%;
+    height:80%;
+    font-size: .8em;
+    border-radius: 8px;
+    color:var(--background);
+    background:var(--location-button-color);
+}

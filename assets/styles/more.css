@@ -1,0 +1,133 @@
+/* MORE OPTIONS */
+/* ---------------------------------------------------------------------------------------- */
+#add-options, .add-options-icon{
+    position: absolute;
+    display: flex;
+    top:20px;
+    
+    height:18px;
+
+    background-repeat: no-repeat;
+}
+
+.more{
+    bottom:80px;
+}
+
+.more-icon{
+    top:18px;
+    left:18px;
+    width:20px;
+    height:20px;
+
+    background-image: url(../icons/mais-icone.svg);
+    background-position: 50% 50%;
+
+    
+    transition-duration: .5s;
+}
+.options-active .eclipse .more-icon{
+    transform: rotate(45deg);
+}
+
+.eclipse.more,
+.options-active ~ .eclipse.video,
+.options-active ~ .eclipse.location{
+    position: fixed;
+    width:56px;
+    height:56px;
+    right:20px;
+
+    background: var(--location-button-color);
+    box-shadow: 0px 4px 4px rgba(255, 152, 56, 0.06);
+    border-radius: 100%;
+
+    cursor:pointer;
+    z-index:100;
+}
+
+.eclipse.location p,
+.eclipse.video p{
+    opacity: 0;
+}
+
+.options-active ~ .eclipse.location p,
+.options-active ~ .eclipse.video p{
+    opacity: 1;
+    position: absolute;
+    width:max-content;
+    font-size:min(max(18px), 3.8vw);
+    top:8px;
+    right:5em;
+    padding:5px;
+    padding-right:10px;
+    padding-left:10px;
+    border-radius: 100px;
+
+    color:var(--text-color);
+    background: var(--background);
+}
+
+.options-active ~ .video{
+    bottom:150px;
+    opacity:1;
+    animation: options-move-video .5s ;
+}
+
+.options-active ~ .video .video-icon{
+    background-image: url(../icons/Camerafab.svg);
+    left:17px;
+    width:25px;    
+}
+
+.options-active ~ .location{
+    bottom:220px;
+    opacity:1;
+    animation: options-move-location 1s ;
+}
+
+.options-active ~ .location .location-icon{
+    background-image: url(../icons/pinfabiconee.svg);
+    left:18px;
+    top:16px;
+    width:25px;
+    height:26px;
+}
+
+.options-active .background-blur{
+    position: fixed;
+    bottom:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background: grey;
+    opacity:0.4;
+    z-index:99;
+    animation: background-blur .5s ;
+}
+
+
+@keyframes options-move-video {
+    from {bottom:80px;
+          z-index:98;
+          opacity:0;}
+
+    to {bottom:150px;
+        opacity:1;}
+}
+@keyframes options-move-location{
+    from {bottom:80px;
+          z-index:97;
+          opacity:0;}
+
+    to {bottom:220px;
+        opacity:1;}
+}
+@keyframes background-blur{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.4;
+    }
+}

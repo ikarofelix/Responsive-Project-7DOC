@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7DaysOfCode - Responsividade</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -15,284 +15,71 @@
 <body>
     <header>
         <div class="user-info">
-            <div class="profile-border" id="first-image"></div>
+            <!-- <div class="profile-border" id="first-image"></div> -->
+            <div class="profile-border">
+                <img src="./assets/images/image2.png" alt="User picture" class="user-picture">
+            </div>
             <div class="user-text">
                 <h1 class="title">Olá, Sônia</h1>
-                <p class="subtitle">Mais 4 consultas hoje</p>
+                <span class="subtitle">Mais 4 consultas hoje</span>
             <div>
         </div>
     </header>
+
     <main>
         <section class="schedule">
             <section class="date-section"><!--CONSULTS IN THE DAY-->
-                <div class="date">
-                    <h1 id="date" class="title">Hoje</h1>
+                <div>
+                    <h1 class="date title">Hoje</h1>
                 </div>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="second-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Luciana Dias</h1>
-                        <div class="location">
+                <section id="remote-consult" class="grid-container"><!--REMOTE CONSULT-->
+                    <div class="client-border">
+                        <img src="./assets/images/image3.jpg" alt="Client picture" class="client-picture">
+                    </div>
+                    <div class="client-info">
+                        <h1 class="title client-name">Luciana Dias</h1>
+                        <div class="consult-type">
                             <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
+                            <span class="subtitle consult">Consulta Remota</span>
                         </div>
-                        
                     </div>
                     <div class="message">
-                        <i class='bx bx-chat' ></i>
+                        <i class='bx bx-chat'></i>
                     </div>
                     <div class="separator"></div>
                     <div class="time">
-                        <p class="consultation-time">14:00 - 15:00 (1 hora)</p>
+                        <span class="consultation-time">14:00 - 15:00 (1 hora)</span>
                     </div>
                     <div class="call-buttons">
                         <button class="video-call call-button">Ligar por vídeo</button>
                         <button class="voice-call call-button">Ligar por áudio</button>
                     </div>
                 </section>
-                <section class="grid-container"><!--LOCAL CONSULT-->
-                    <div class="profile-border" id="third-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Larissa Santana</h1>
-                        <div class="location">
-                            <i class='bx bx-map' ></i>
-                            <p class="subtitle consult">Consulta no local</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">16:00 - 17:00 (1 hora)</p>
-                    </div>
-                    <button class="address">Ver endereço</button>
-                </section>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="fourth-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Marcos Correia</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">17:20 - 18:00 (40 minutos)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-            </section>
-            <section class="date-section"><!--CONSULTS IN THE DAY-->
-                <div class="date">
-                    <h1 id="date" class="title">Amanhã</h1>
-                </div>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="second-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Luciana Dias</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">14:00 - 15:00 (1 hora)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-                <section class="grid-container"><!--LOCAL CONSULT-->
-                    <div class="profile-border" id="third-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Larissa Santana</h1>
-                        <div class="location">
-                            <i class='bx bx-map' ></i>
-                            <p class="subtitle consult">Consulta no local</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">16:00 - 17:00 (1 hora)</p>
-                    </div>
-                    <button class="address">Ver endereço</button>
-                </section>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="fourth-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Marcos Correia</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">17:20 - 18:00 (40 minutos)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-            </section>
-            <section class="date-section"><!--CONSULTS IN THE DAY-->    
-                <div class="date">
-                    <h1 id="date" class="title">Quarta-Feira</h1>
-                </div>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="second-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Luciana Dias</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">14:00 - 15:00 (1 hora)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-                <section class="grid-container"><!--LOCAL CONSULT-->
-                    <div class="profile-border" id="third-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Larissa Santana</h1>
-                        <div class="location">
-                            <i class='bx bx-map' ></i>
-                            <p class="subtitle consult">Consulta no local</p>
-                        </div>
 
+
+                <section id="home-consult" class="grid-container"><!--HOME CONSULT-->
+                    <div class="client-border">
+                        <img src="./assets/images/image5.png" alt="Client picture" class="client-picture">
+                    </div>
+                    <div class="client-info">
+                        <h1 class="title client-name">Larissa Santana</h1>
+                        <div class="consult-type">
+                            <i class='bx bx-map'></i>
+                            <span class="subtitle consult">Consulta no local</span>
+                        </div>
                     </div>
                     <div class="message">
-                        <i class='bx bx-chat' ></i>
+                        <i class='bx bx-chat'></i>
                     </div>
                     <div class="separator"></div>
                     <div class="time">
-                        <p class="consultation-time">16:00 - 17:00 (1 hora)</p>
+                        <span class="consultation-time">16:00 - 17:00 (1 hora)</span>
                     </div>
                     <button class="address">Ver endereço</button>
                 </section>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="fourth-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Marcos Correia</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">17:20 - 18:00 (40 minutos)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="second-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Luciana Dias</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">14:00 - 15:00 (1 hora)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-                <section class="grid-container"><!--LOCAL CONSULT-->
-                    <div class="profile-border" id="third-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Larissa Santana</h1>
-                        <div class="location">
-                            <i class='bx bx-map' ></i>
-                            <p class="subtitle consult">Consulta no local</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">16:00 - 17:00 (1 hora)</p>
-                    </div>
-                    <button class="address">Ver endereço</button>
-                </section>
-                <section class="grid-container"><!--REMOTE CONSULT-->
-                    <div class="profile-border" id="fourth-image"></div>
-                    <div class="info">
-                        <h1 class="title name">Marcos Correia</h1>
-                        <div class="location">
-                            <i class='bx bx-video'></i>
-                            <p class="subtitle consult">Consulta Remota</p>
-                        </div>
-                        
-                    </div>
-                    <div class="message">
-                        <i class='bx bx-chat' ></i>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="time">
-                        <p class="consultation-time">17:20 - 18:00 (40 minutos)</p>
-                    </div>
-                    <div class="call-buttons">
-                        <button class="video-call call-button">Ligar por vídeo</button>
-                        <button class="voice-call call-button">Ligar por áudio</button>
-                    </div>
-                </section>
-            </section>
         </section>
-        
+
+        <!-- MORE OPTIONS -->
         <div id="add-options">
             <div class="background-blur"></div>
             <span class="eclipse more">
@@ -306,9 +93,10 @@
             </span>
         </div>
     </main>
+    <!-- FOOTER MENU -->
     <footer class="bottom-menu">
         <span class="consults menu-icon">
-            <span ></span>
+            <span></span>
             Consultas
         </span>
         <span class="clients menu-icon">
