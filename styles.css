@@ -1,0 +1,386 @@
+:root{
+    --body-background:rgb(236, 231, 231);
+    --background:#FFFFFF;
+    --title-color:#464646;
+    --subtitle-color:#A3A3A3;
+    --text-color:#464646;
+    --location-button-color:#4894FF;
+    --message-icon-background-color:#F6F6F6;
+    --message-icon-color:#4894FF;
+    --video-call-button-background:#FFB050;
+    --audio-call-button-border-color:#ECECEC;
+    --profile-border:32px; /**/
+    --user-title-size:22px;
+    --user-subtitle-size:13px;
+    --main-width:328px;
+    --grid-container-width:328px;
+    --grid-container-height:170px;
+    --name-size:14px;
+    --consult-size:12px;
+    --consultation-time-size:18px;
+    --location-size:15px;
+}
+
+html{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--body-background);
+    width:360px;
+    height:100vh;
+    margin:auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height:124px;
+}
+
+.user-info{
+    position:relative;
+    display:flex;
+    height:60%;
+    top:50px;
+}
+
+.profile-border{
+    border-radius:100%;
+}
+
+#first-image{
+    background-image:url(/7daysofcode-responsividade-1-7/image2.png);
+    background-position:30% 20%;
+    background-size:300%;
+    margin-left:20px;
+    height:57px;
+    width:57px;
+}
+
+.user-text{
+    display:block;
+    margin-left:30px;
+}
+
+.title{
+    color:var(--title-color);
+    font-size: var(--user-title-size);
+}
+
+.subtitle{
+    color:var(--title-color);
+    font-size: var(--user-subtitle-size);
+}
+
+main{
+    margin-top:30px;
+    margin-left:20px;
+    width:var(--main-width);
+}
+  
+.date-section{
+    padding-bottom:30px;
+} 
+
+.date{
+    margin-bottom:15px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 70px auto 70px;
+    grid-template-rows: 70px 1px auto;
+    grid-template-areas: 
+    'profile name message'
+    'middle-left middle middle-right'
+    'bottom-left bottom bottom-right';
+    background: var(--background);
+    width:var(--grid-container-width);
+    height:var(--grid-container-height);
+    border-radius:8px;
+    backdrop-filter: blur(11px);
+    margin-bottom:15px;
+}
+
+#second-image{
+    grid-area: profile;
+    background-image: url(/7daysofcode-responsividade-1-7/image3.jpg);
+    background-position:30% 20%;
+    background-size:100%;
+    height:var(--profile-border);
+    width:var(--profile-border);
+    margin: auto auto;
+}
+
+.info{
+    grid-area: name;
+    margin:auto 0;
+}
+
+.name{
+    font-size: var(--name-size);
+}
+
+.location{
+    display:flex;
+    opacity: 0.9;
+}
+
+.consult{
+    font-size:var(--consult-size);
+}
+
+.location .bx{
+    margin-top:2px;
+    margin-right: 5px;
+    font-size: var(--location-size);
+}
+
+.message{
+    grid-area: message;
+    font-size: 25px;
+    background: var(--message-icon-background-color);
+    color:var(--message-icon-color);
+    margin:auto;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+}
+
+.separator{
+    grid-area: middle;
+    grid-column: 1/4;
+    height:1px;
+    background:var(--text-color);
+    opacity:0.1;
+}
+
+.time{
+    position: relative;
+    grid-column: 1/4;
+    left: 20px;
+    color:var(--text-color);
+}
+
+.call-buttons{
+    grid-column: 1/4;
+    margin:auto;
+}
+
+.call-button{
+    width:139px;
+    height:48px;
+    border-radius: 8px;
+}
+
+.video-call{
+    box-sizing: border-box;
+    background:var(--video-call-button-background);
+    border:0;
+    color:var(--background);
+    box-shadow: 0px 4px 16px rgba(255, 176, 80, 0.16);
+    width:139px;
+    height:48px;
+    border-radius: 8px;
+}
+
+.voice-call{
+    box-sizing: border-box;
+    background: var(--background);
+    border: 1px solid var(--audio-call-button-border-color);
+    color:var(--text-color);
+}
+
+.address{
+    background:var(--location-button-color);
+    border:0;
+    color:var(--background);
+    box-sizing: border-box;
+    width:296px;
+    height:48px;
+    border-radius: 8px;
+    margin:auto;
+    grid-column: 1/4;
+}
+
+#third-image{
+    grid-area: profile;
+    background-image: url(/7daysofcode-responsividade-1-7/image5.png);
+    background-position:30% 20%;
+    background-size:150%;
+    height:var(--profile-border);
+    width:var(--profile-border);
+    margin: auto auto;
+}
+
+#fourth-image{
+    grid-area: profile;
+    background-image: url(/7daysofcode-responsividade-1-7/image1.png);
+    background-position:40% 50%;
+    background-size:150%;
+    height:var(--profile-border);
+    width:var(--profile-border);
+    margin: auto auto;
+}
+
+
+@media screen and (min-width:800px){
+    :root{
+        --profile-border:60px;
+        --user-title-size:30px;
+        --user-subtitle-size:18px;
+        --main-width:650px;
+        --grid-container-width:650px;
+        --grid-container-height:336px;
+        --name-size:25px;
+        --consult-size:20px;
+        --consultation-time-size:22px;
+        --location-size:24px;
+    }
+    body{
+        margin:auto;
+    }
+    .user-info{
+        height:80%;
+    }
+    #first-image{
+        width:80px;
+        height:80px;
+    }
+    main{
+        margin-left:-145px;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-columns: 130px auto 130px;
+        grid-template-rows: 130px 10px auto;
+        margin-bottom:25px;
+    }
+    .message{
+        font-size: 35px;
+        height:40px;
+        width:40px;
+    }
+    .separator{
+        height:3px;
+    }
+    .time{
+        top:20px;
+        font-size: var(--consultation-time-size);
+    }
+    .call-button{
+        width:300px;
+        height:70px;
+    }
+    .voice-call{
+        border: 3px solid var(--audio-call-button-border-color);
+    }
+    .address{
+        width:600px;
+        height:70px;
+    }
+}
+
+@media screen and (min-width:1500px){
+    :root{
+        /* --profile-border:50px;
+        --user-title-size:35px;
+        --user-subtitle-size:20px;
+        --main-width:calc(100vw - 100px);
+        --grid-container-width:25rem;
+        --grid-container-height:15rem;
+        --name-size:20px;
+        --consult-size:15px;
+        --consultation-time-size:17px;
+        --location-size:19px; */
+        --profile-border:60px;
+        --user-title-size:30px;
+        --user-subtitle-size:18px;
+        --main-width:calc(100vw - 100px);
+        --grid-container-width:650px;
+        --grid-container-height:336px;
+        --name-size:25px;
+        --consult-size:20px;
+        --consultation-time-size:22px;
+        --location-size:24px;
+    }
+    body{
+        margin:0;
+    }
+    .user-info{
+        height:80%;
+        width:calc(100vw - 50px);
+        justify-content: center;
+    }
+    #first-image{
+        width:90px;
+        height:90px;
+    }
+    main{
+        margin-left: 50px;
+    }
+    .date-section{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        gap:25px;
+        margin:30px;
+    }
+    #date{
+        width:80vw;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-columns: 6rem auto 6rem;
+        grid-template-rows: 6rem 10px auto;
+        margin-bottom:25px;
+    }
+    /* .message{
+        font-size: 35px;
+        height:40px;
+        width:40px;
+    }
+    .separator{
+        height:3px;
+    }
+    .time{
+        top:20px;
+        font-size: var(--consultation-time-size);
+    }
+    .call-button{
+        width:185px;
+        height:60px;
+    }
+    .voice-call{
+        border: 3px solid var(--audio-call-button-border-color);
+    }
+    .address{
+        width:370px;
+        height:60px;
+    } */
+    .message{
+        font-size: 35px;
+        height:40px;
+        width:40px;
+    }
+    .separator{
+        height:3px;
+    }
+    .time{
+        top:20px;
+        font-size: var(--consultation-time-size);
+    }
+    .call-button{
+        width:300px;
+        height:70px;
+    }
+    .voice-call{
+        border: 3px solid var(--audio-call-button-border-color);
+    }
+    .address{
+        width:600px;
+        height:70px;
+    }
+}
