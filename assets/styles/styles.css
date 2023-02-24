@@ -31,81 +31,46 @@ html{
     scroll-behavior: smooth;
     overflow-x:hidden;
     min-width:300px;
-    max-width:1750px;
+    max-width:2200px;
 }
 
 body{
     background: var(--body-background);
-    /* width:360px; */
-    width:21rem;
-    /* max-width: 600px; */
+    width: 300px;
     margin:auto;
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
     list-style-type: none;
+    transition: all .5s ease-in-out;
 }
 
 
 
 /* MEDIA SETTINGS */
 
-@media screen and (min-width:300px){
+@media screen and (min-width:800px) {
+    body{
+        width:750px;
+    }
     header{
-        font-size:1em;
-        height:8rem;
+        font-size: 16px;
     }
-    .schedule{
-        font-size: 1.8vh;
+    .grid-container{
+        width:350px;
+        height:13em;
     }
-    .body{
-        width:50vw;
-    }
-    @media screen and (min-width:500px){
+    @media screen and (min-width:1200px) {
+        body{
+            width:1150px;
+        }
         header{
-            font-size:calc(1em + .1vw);
-            height:8rem;
+            font-size: 18px;
         }
         .schedule{
-            font-size: 1.8vh;
+            font-size:16px;
         }
-        body{
-            width:70vw;
+        .grid-container{
+            width: 360px;
         }
-    }
-}
-
-@media screen and (min-width:1200px){
-    header{
-        font-size:1vw;
-        height:8vw;
-    }
-    .schedule{
-        font-size: 1vw;
-    }
-    body{
-        animation:shrinking .5s;
-        width:50vw;
-    }
-    @keyframes shrinking {
-        from {width:70vw;}
-        to {width:50vw;}
-    } 
-}
-
-@media screen and (min-width:1750px){
-    header{
-        font-size:18px;
-        height:140px;
-    }
-    .schedule{
-        font-size: 18px;
-    }
-    body{
-        animation:shrinkingLast .5s;
-        width:700px;
-    }
-    @keyframes shrinkingLast {
-        from {width:50vw;}
-        to {width:700px;}
-    }
+    }   
 }

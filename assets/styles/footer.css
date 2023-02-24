@@ -17,12 +17,16 @@ footer.bottom-menu{
 footer{
     color:var(--text-color);
 }
+.menu-icon{
+    align-self: baseline;
+    font-size:14px;
+}
 .menu-icon>span{
     display: block;
     margin:auto;
 }
 .consults>span{
-    background-image: url(../icons/calendario-icone.svg);
+    background-image: url(../icons/Calendarioicone.png);
     width:20px;
     height:22px;
 }
@@ -46,4 +50,9 @@ footer{
 .dashboard:hover,
 .menu:hover{
     cursor:pointer;
+}
+.bottom-menu-icons{
+    display:inline-flex;
+    width:fit-content;
+    gap:30px;
 }

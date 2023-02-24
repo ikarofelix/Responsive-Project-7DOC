@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7DaysOfCode - Responsividade</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/responsivo.png">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +29,10 @@
 
     <main>
         <section class="schedule">
+            <div>
+                <h1 class="date title">Hoje</h1>
+            </div>
             <section class="date-section"><!--CONSULTS IN THE DAY-->
-                <div>
-                    <h1 class="date title">Hoje</h1>
-                </div>
                 <section id="remote-consult" class="grid-container"><!--REMOTE CONSULT-->
                     <div class="client-border">
                         <img src="./assets/images/image3.jpg" alt="Client picture" class="client-picture">
@@ -59,10 +60,52 @@
 
                 <section id="home-consult" class="grid-container"><!--HOME CONSULT-->
                     <div class="client-border">
+                        <img src="./assets/images/image1.png" alt="Client picture" class="client-picture">
+                    </div>
+                    <div class="client-info">
+                        <h1 class="title client-name">Junior Henrique</h1>
+                        <div class="consult-type">
+                            <i class='bx bx-map'></i>
+                            <span class="subtitle consult">Consulta no local</span>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <i class='bx bx-chat'></i>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="time">
+                        <span class="consultation-time">16:00 - 17:00 (1 hora)</span>
+                    </div>
+                    <button class="address">Ver endereço</button>
+                </section>
+
+                <section id="home-consult" class="grid-container"><!--HOME CONSULT-->
+                    <div class="client-border">
+                        <img src="./assets/images/image4.jpg" alt="Client picture" class="client-picture">
+                    </div>
+                    <div class="client-info">
+                        <h1 class="title client-name">Antonio Gabriel</h1>
+                        <div class="consult-type">
+                            <i class='bx bx-map'></i>
+                            <span class="subtitle consult">Consulta no local</span>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <i class='bx bx-chat'></i>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="time">
+                        <span class="consultation-time">16:00 - 17:00 (1 hora)</span>
+                    </div>
+                    <button class="address">Ver endereço</button>
+                </section>
+
+                <section id="home-consult" class="grid-container"><!--HOME CONSULT-->
+                    <div class="client-border">
                         <img src="./assets/images/image5.png" alt="Client picture" class="client-picture">
                     </div>
                     <div class="client-info">
-                        <h1 class="title client-name">Larissa Santana</h1>
+                        <h1 class="title client-name">Julia Maria</h1>
                         <div class="consult-type">
                             <i class='bx bx-map'></i>
                             <span class="subtitle consult">Consulta no local</span>
@@ -95,22 +138,24 @@
     </main>
     <!-- FOOTER MENU -->
     <footer class="bottom-menu">
-        <span class="consults menu-icon">
-            <span></span>
-            Consultas
-        </span>
-        <span class="clients menu-icon">
-            <span></span>
-            Clientes
-        </span>
-        <span class="dashboard menu-icon">
-            <span></span>
-            Relatórios
-        </span>
-        <span class="menu menu-icon">
-            <span></span>
-            Menu
-        </span>
+        <div class="bottom-menu-icons">
+            <span class="consults menu-icon" style="color:#4894FF">
+                <span></span>
+                Consultas
+            </span>
+            <span class="clients menu-icon">
+                <span></span>
+                Clientes
+            </span>
+            <span class="dashboard menu-icon">
+                <span></span>
+                Relatórios
+            </span>
+            <span class="menu menu-icon">
+                <span></span>
+                Menu
+            </span>
+        </div>
     </footer>
 </body>
 

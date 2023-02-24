@@ -1,13 +1,12 @@
 header{
     font-size:15px;
     height:8rem;
+    transition: all .5s ease-in-out;
 }
 
 .user-info{
     position:relative;
     display:flex;
-    justify-content: center;
-
     height:60%;
     top:50px;
 }
@@ -33,7 +32,6 @@ header{
 
 .title{
     color:var(--title-color);
-    /* font-size: 22px; */
     font-size:1.3em;
 }
 
@@ -53,6 +51,9 @@ main{
 }
   
 .date-section{
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
     padding-bottom:30px;
 } 
 
@@ -73,6 +74,7 @@ main{
     border-radius:8px;
     backdrop-filter: blur(11px);
     margin-bottom:15px;
+    transition: all .5s ease-in-out;
 }
 
 .client-border{
