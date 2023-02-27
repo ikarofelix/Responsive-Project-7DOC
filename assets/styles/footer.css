@@ -24,31 +24,25 @@ footer{
 .menu-icon>span{
     display: block;
     margin:auto;
-}
-.consults>span{
-    background-image: url(../icons/Calendarioicone.png);
-    width:20px;
-    height:22px;
-}
-.clients>span{
-    background-image: url(../icons/clientes-icone.svg);
     width:24px;
-    height:20px;
+    height:22px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.dashboard>span{
+#consults>span{
+    background-image: url(../icons/Calendarioicone.png);
+}
+#clients>span{
+    background-image: url(../icons/clientes-icone.svg);
+}
+#dashboard>span{
     background-image: url(../icons/relatorios-icone.svg);
-    width:14px;
-    height:18px;
 }
-.menu>span{
+#menu>span{
     background-image: url(../icons/menu-icone.svg);
-    width:20px;
-    height:14px;
 }
-.consults:hover,
-.clients:hover,
-.dashboard:hover,
-.menu:hover{
+.menu-icon:hover,
+.menu-icon>label:hover{
     cursor:pointer;
 }
 .bottom-menu-icons{

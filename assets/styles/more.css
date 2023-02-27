@@ -46,13 +46,13 @@
     z-index:100;
 }
 
-.eclipse.location p,
-.eclipse.video p{
+.eclipse.location label,
+.eclipse.video label{
     opacity: 0;
 }
 
-.options-active ~ .eclipse.location p,
-.options-active ~ .eclipse.video p{
+.options-active ~ .eclipse.location label,
+.options-active ~ .eclipse.video label{
     opacity: 1;
     position: absolute;
     width:max-content;
