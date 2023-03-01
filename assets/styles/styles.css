@@ -1,6 +1,7 @@
 @import url(./more.css);
 @import url(./footer.css);
 @import url(./consults.css);
+@import url(./client-form.css);
 
 
 *, 
@@ -62,7 +63,6 @@ body{
     @media screen and (min-width:1500px) {
         body{
             width:1150px;
-            /* margin-left:200px; */
         }
         header{
             font-size: 18px;
@@ -90,6 +90,12 @@ body{
             flex-direction: column;
             gap:0;
             margin-top:30px;
+        }
+        .more{
+            display:none;
+        }
+        .new-client-form{
+            display:flex;
         }
     }   
 }

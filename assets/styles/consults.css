@@ -75,6 +75,7 @@ main{
     backdrop-filter: blur(11px);
     margin-bottom:15px;
     transition: all .5s ease-in-out;
+    
 }
 
 .client-border{

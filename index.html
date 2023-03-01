@@ -41,7 +41,7 @@
                         <h1 class="title client-name">Luciana Dias</h1>
                         <div class="consult-type">
                             <i class='bx bx-video'></i>
-                            <span class="subtitle consult">Consulta Remota</span>
+                            <span class="subtitle consult">Consulta remota</span>
                         </div>
                     </div>
                     <div class="message">
@@ -135,14 +135,45 @@
                 <label for="location-icon">Nova consulta na casa do paciente</label><span id="location-icon" class="location-icon add-options-icon"></span>
             </span>
         </div>
+
+        <!-- NEW CONSULT FORM -->
+        <form id="new-client" action="#" method="get" class="new-client-form">
+            <h1>Adicionar nova consulta</h1>
+            <div>
+                <label for="consult-client-name">Nome do cliente</label>
+                <input required maxlength="50" type="text" name="consult-client-name" id="consult-client-name" placeholder="Cliente">
+            </div>
+            <div>
+                <label for="local-client"><input required type="radio" name="location-client" value="local-client">Consulta no local</label>
+                <label for="remote-client"><input type="radio" name="location-client" value="remote-client">Consulta remota</label>
+            </div>
+            <div>
+                <label for="consult-date">Data da consulta</label>
+                <input required type="date" name="consult-date" id="consult-date">
+            </div>
+            <div class="consult-time">
+                <label for="consult-time">Horário da consulta</label>
+                <input required type="time" name="consult-time" id="consult-time">
+            </div>
+            <div>
+                <label for="consult-observation">Observação</label>
+                <textarea form="new-client" name="consult-observation" id="consult-observation" cols="30" rows="9" placeholder="Lembretes"></textarea>
+            </div>
+            <div>
+                <button type="submit">Salvar consulta</button>
+            </div>
+            
+        </form>
     </main>
     <!-- FOOTER MENU -->
     <footer class="bottom-menu">
         <div class="bottom-menu-icons">
-            <span id="consults" class="menu-icon" style="color:#4894FF">
-                <span></span>
-                <label for="consults">Consultas</label>
-            </span>
+            <a href="./">
+                <span id="consults" class="menu-icon" style="color:#4894FF">
+                    <span></span>
+                    <label for="consults">Consultas</label>
+                </span>
+            </a>
             <span id="clients" class="menu-icon">
                 <span></span>
                 <label for="clients">Clientes</label>
