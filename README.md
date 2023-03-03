@@ -1,11 +1,11 @@
-# Responsivity-Project-7DOC
- HTML, CSS and JavaScript. Focusing on the reponsitivity of the project - 7DaysOfCode
+# Responsive-Project-7DOC
+ HTML, CSS and JavaScript. Focusing on the reponsive web design of the project - 7DaysOfCode
 
 This is a project made by Ikaro Felix with the ideas and suggestions from a challenge hosted by Alura.
 
 The project consists of creating a site to show the agenda of the hospital's doctors.
 
-The focus is working with HTML and CSS and the main focus being the site's responsivity.
+The focus is working with HTML and CSS and the main focus being the responsive web design.
 
 Project Language: pt-BR (Brazilian Portuguese)
 
