@@ -12,4 +12,4 @@ more.addEventListener("click", function(){
         more.classList.add("options-active")
         addOptions.classList.add("options-active");
     }
-})
+}) 
